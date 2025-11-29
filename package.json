@@ -1,0 +1,32 @@
+{
+    "name": "crypto-mcp",
+    "version": "0.1.0",
+    "type": "module",
+    "description": "MCP server for cryptocurrency data (Binance & CMC)",
+    "main": "build/index.js",
+    "scripts": {
+        "build": "tsc",
+        "start": "node build/index.js",
+        "dev": "ts-node src/index.ts",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "mcp",
+        "crypto",
+        "binance",
+        "coinmarketcap"
+    ],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "^0.6.0",
+        "axios": "^1.7.7",
+        "dotenv": "^16.4.5",
+        "zod": "^3.23.8"
+    },
+    "devDependencies": {
+        "@types/node": "^20.12.7",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.4.5"
+    }
+}
